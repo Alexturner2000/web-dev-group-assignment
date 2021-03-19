@@ -1,3 +1,77 @@
+/*
+Colour pallet
+#002366
+#251607
+#FFFFFF
+#f5f5f5
+*/
+
+
 body {
   font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
 }
+
+/* TOP HEADER NON-FIXED */
+/* CONTAINS INSTAGRAM, AND BLUE BAR */
+.top_header {
+  display: grid;
+  grid-template-columns: 100%;
+  background: #002366;
+}
+
+.topContainer {
+  padding: 3px;
+  padding-left: 4em;
+  margin-top: auto;
+}
+
+#socialMedia {
+  margin-right: 15px;
+}
+
+/* SECOND TOP HEADER FIXED */
+/* CONTAINS LOGO, NAVIATION BUTTONS, LOGIN*/
+
+.header {
+  position: relative;
+}
+
+.header_wrapper { /*wraps logo and NAV*/
+  background-color: #f5f5f5;
+  height: 100px;
+  border-style: solid;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  border-color: #002366;
+}
+
+.logo {
+  float: left;
+  margin-left: 30px;
+  height: 100px;
+  width: auto;
+}
+
+.navButton {
+  height: 40px;
+  width: 15rem;
+  color: #251607;
+  border-width: 0px;
+  border-color: #251607;
+  margin-top: 30px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  margin-top: 71px;
+}
+
+/*----------------- MAIN BODY--------------*/
