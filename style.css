@@ -18,7 +18,8 @@ body {
 .top_header {
   display: grid;
   grid-template-columns: 100%;
-  background: #002366;
+  background-image: url("images/colors and gradients/royal-blue-gradient.jpg");
+  background-position: top;
 }
 
 .topContainer {
@@ -31,8 +32,19 @@ body {
   margin-right: 15px;
 }
 
+
 /* SECOND TOP HEADER FIXED */
 /* CONTAINS LOGO, NAVIATION BUTTONS, LOGIN*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  margin-top: 71px;
+}
 
 .header {}
 
@@ -48,18 +60,24 @@ body {
   border-top: 0px;
   border-color: #002366;
   padding: 20px;
+  position: relative;
   background-color: white;
-
 }
 
 li, a, Nav___links{
   text-decoration: none;
   font-size: 18px;
   color: #002366;
-
 }
 
-.Nav___links li{
+li {
+}
+
+.login___button{
+  margin-right: 10%;
+}
+
+.Nav___UI li{
   display: inline-block;
   padding: 0px 40px;
 }
@@ -72,25 +90,27 @@ li, a, Nav___links{
   width: auto;
 }
 
-
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  margin-top: 71px;
-}
-
 /*----------------- MAIN BODY--------------*/
 
-.Nav___links li a {
+.Nav___UI li a {
   transition: all 0.2s ease 0s;
 }
 
-.Nav___links li a:hover {
-  color: lightgray;
-  font-size: 20px;
+.Nav___UI li a:hover {
+  color: gray;
+  font-size: 22px;
+}
+
+.main___pic img {
+  margin-top: auto;
+  display: block;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
 }
