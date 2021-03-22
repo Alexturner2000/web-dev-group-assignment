@@ -1,4 +1,7 @@
-//Scroll Fixed Header Scripts
+
+//----------------------------
+// Sticky NAV JS
+//----------------------------
 window.onscroll = function() {
   stickyHeader()
 };
@@ -14,21 +17,26 @@ function stickyHeader() {
   }
 }
 
+
+
+//---------------------------
+//  GOOGLE MAPS JS
+//---------------------------
 function initMap() {
-  // The location of Uluru
-  const uluru = {
-    lat: -25.344,
-    lng: 131.036
-    //50.06013859607651, -122.95661669464884
+  // The location of whistler
+  const whistler= {
+    lat: 50.059430,
+    lng: -122.957110
   };
   // The map, centered at Uluru
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
+    zoom: 12,
+    center: whistler,
+    mapTypeId: 'satellite'
   });
   // The marker, positioned at Uluru
   const marker = new google.maps.Marker({
-    position: uluru,
+    position: whistler,
     map: map,
   });
 }
