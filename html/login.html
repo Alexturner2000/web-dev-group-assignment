@@ -6,15 +6,18 @@
 	<META name="author" content="Alex Turner & Keiran Conway">
 	<META name="Description" content="Login page for 'Mt.Buggin' website">
 	<META name="google-signin-client_id" content="************">
+	<!-- Font Stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<!-- Animation Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<!-- Login.css Stylesheet-->
 	<link rel="stylesheet" href="/css/login.css">
 </HEAD>
 
 <BODY>
 	<div id="login_box">
-
 		<header>
 			<p>Login</p>
 			<img src="../images/MtBuggin.png" class="logo">
@@ -25,26 +28,23 @@
 			<input type="password" placeholder="Password..." id="password_id" /><br>
 		</div>
 
-		<button onclick="login()">Login</button>
+		<button class="login_button" onclick="login()">Login</button>
 
 		<div class=register><p><a href="register.html">Not a member?</a></p></div>
 
 		 <div class="split">━━━━━━━ OR ━━━━━━━</div>
 
 		<div class="google_login">
-			<!--<img src="../images/icons/google/btn_google_signin_dark_normal_web@2x.png" class="logo"> -->
+			<img src="../images/icons/google/btn_google_signin_dark_normal_web@2x.png" class="logo">
 		</div>
-
-
 	</div>
-	<script src="../javascript/login.js"></script>
 
+	<script src="../javascript/login.js"></script>
 	<script src="https://apis.google.com/js/api.js">
 		gapi.load('auth2', function(){
 			gapi.auth2.init();
 		});
 	</script>
-
 </BODY>
 
 </HTML>
