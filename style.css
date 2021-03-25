@@ -43,7 +43,7 @@ body {
 }
 
 .sticky + .content {
-  margin-top: 100px;
+  margin-top: 101px;
 }
 
 .header {}
@@ -62,6 +62,8 @@ body {
   padding: 20px;
   position: relative;
   background-color: white;
+  margin-right: 0%;
+  padding-right: 4%;
 }
 
 li, a, Nav___links{
@@ -71,10 +73,6 @@ li, a, Nav___links{
 }
 
 li {
-}
-
-.login___button{
-  margin-right: 10%;
 }
 
 .Nav___UI li{
@@ -89,6 +87,30 @@ li {
   height: 100px;
   width: auto;
 }
+
+.login_button {
+	box-shadow: 0px 5px 15px -7px #000000;
+	background-color:#0049c7;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Arial', sans-serif;
+	font-size:15px;
+	padding:12px 35px;
+	text-decoration:none;
+  border: none;
+}
+.login_button:hover {
+	background-color:#0a0cd4;
+  transition: all 0.2s ease 0s;
+}
+.login_button:active {
+	position:relative;
+	top:1px;
+}
+
+
 
 /*----------------- MAIN BODY--------------*/
 

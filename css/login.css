@@ -1,0 +1,85 @@
+body{
+  background-color: rgba(0,0,0,.1);
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+
+
+#login_box {
+  border: 17px none transparent;
+  border-radius: 11px;
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  margin-top: 10%;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 5px 13px -7px #000000;
+}
+
+/* HEADER (LOGO AND LOGIN) */
+header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: auto;
+  height: 50px;
+}
+
+header img {
+    margin-right: 0%;
+    margin-top: -18%;
+}
+
+header p {
+  font-size: 40px;
+  margin-left: 5%;
+  color: #002366;
+}
+
+/* INPUTS*/
+.input_box {
+  margin-left: 5%;
+}
+
+#email_id {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #f1f8f;
+  border-style: double;
+  color: #b3b3b3;
+}
+
+#password_id {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #f1f8f;
+  border-style: double;
+  color: #b3b3b3;
+  margin-top: 10px;
+}
+
+.register a {
+  text-decoration: none;
+}
+
+.register a:hover {
+   text-decoration: underline;
+}
+
+/* Additional login */
+.split {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
