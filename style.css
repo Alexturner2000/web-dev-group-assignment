@@ -4,6 +4,8 @@ Colour pallet
 #251607
 #FFFFFF
 #f5f5f5
+#304886
+#0049c7
 */
 
 
@@ -13,8 +15,10 @@ body {
   background-color: #ffffff;
 }
 
+/*----------------------------------------*/
 /* TOP HEADER NON-FIXED */
 /* CONTAINS INSTAGRAM, AND BLUE BAR */
+/*----------------------------------------*/
 .top_header {
   display: grid;
   grid-template-columns: 100%;
@@ -32,10 +36,12 @@ body {
   margin-right: 15px;
 }
 
-
+/*----------------------------------------*/
 /* SECOND TOP HEADER FIXED */
 /* CONTAINS LOGO, NAVIATION BUTTONS, LOGIN*/
+/*----------------------------------------*/
 
+/* Used for fixing fixing the header when scolled */
 .sticky {
   position: fixed;
   top: 0;
@@ -46,9 +52,8 @@ body {
   margin-top: 101px;
 }
 
-.header {}
-
-.header_wrapper { /*wraps logo and NAV*/
+ /*wraps logo and NAV*/
+.header_wrapper {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -66,29 +71,35 @@ body {
   padding-right: 4%;
 }
 
+/* Nav links style */
 li, a, Nav___links{
   text-decoration: none;
   font-size: 18px;
   color: #002366;
 }
 
-li {
-}
-
-.Nav___UI li{
+.Nav_UI li {
   display: inline-block;
   padding: 0px 40px;
 }
 
+.Nav_UI li a {
+  transition: all 0.2s ease 0s;
+}
 
-.logo {
+.Nav_UI li a:hover {
+  color: gray;
+  font-size: 22px;
+}
+
+.logo { /* Logo style */
   float: left;
   margin-left: 30px;
   height: 100px;
   width: auto;
 }
 
-.signin_button {
+.signin_button { /* Sign in button style */
 	box-shadow: 0px 5px 15px -7px #000000;
 	background-color:#304886;
 	border-radius:9px;
@@ -100,29 +111,23 @@ li {
 	padding:12px 35px;
 	text-decoration:none;
   border: none;
+  outline: none;
 }
 
 .signin_button:hover {
-	background-color:#0a0cd4;
+	background-color: #293d70;
   transition: all 0.2s ease 0s;
 }
+
 .signin_button:active {
 	position:relative;
 	top:1px;
 }
 
 
-
-/*----------------- MAIN BODY--------------*/
-
-.Nav___UI li a {
-  transition: all 0.2s ease 0s;
-}
-
-.Nav___UI li a:hover {
-  color: gray;
-  font-size: 22px;
-}
+/*----------------------------------------*/
+/*----------------- MAIN BODY-------------*/
+/*----------------------------------------*/
 
 .main___pic img {
   margin-top: auto;
@@ -141,9 +146,10 @@ li {
 
 }
 
-/*----------------- Modal Overlay --------------*/
-
-.modal {
+/*----------------------------------------*/
+/*------- LOGIN Modal Overlay ------------*/
+/*----------------------------------------*/
+.login_modal {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.5);
@@ -158,11 +164,10 @@ li {
 
 .login_box {
   width: 400px;
-  height: 400px;
+  height: 450px;
   background-color: white;
   border: 17px none transparent;
   border-radius: 11px;
-  position:
 }
 
 .second_header {
@@ -185,25 +190,14 @@ li {
 .second_header p {
   font-size: 40px;
   margin-left: 5%;
-  color: #4285F4;
+  color: #304886;
 }
 
-/* INPUTS*/
 .input_box {
-  margin-left: 5%;
+  margin-left: 22%;
 }
 
-#email_id {
-  padding: 8px;
-  font-size: 15px;
-  border-width: 2px;
-  border-radius: 6px;
-  border-color: #f1f8f;
-  border-style: double;
-  color: #b3b3b3;
-}
-
-#password_id {
+#email_id, #password_id {
   padding: 8px;
   font-size: 15px;
   border-width: 2px;
@@ -216,7 +210,7 @@ li {
 
 .login_button {
 	box-shadow: 0px 5px 15px -7px #000000;
-	background-color:#4285F4;
+	background-color: #304886;
 	border-radius:9px;
 	display:inline-block;
 	cursor:pointer;
@@ -226,12 +220,13 @@ li {
 	padding:5px 20px;
 	text-decoration:none;
   border: none;
-  margin-top: 10px;
-  margin-left: 5%;
+  outline: none;
+  margin-top: 20px;
+  margin-left: 40%;
 }
 
 .login_button:hover {
-	background-color:#0049c7;
+	background-color: #293d70;
   transition: all 0.2s ease 0s;
 }
 .login_button:active {
@@ -239,14 +234,17 @@ li {
 	top:1px;
 }
 
-.register a {
-  color: ##4285F4;
+.login-register {
+  color: #304886;
   margin-left: 5%;
   text-decoration: none;
+  margin-left: 36%;
 }
 
-.register a:hover {
+.login-register:hover {
    text-decoration: underline;
+   cursor: pointer;
+   color: #293d70;
 }
 
 /* Additional login */
@@ -254,6 +252,7 @@ li {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 15px;
 }
 
 .google_login {
@@ -267,15 +266,138 @@ li {
 .google_login img {
   height: auto;
   width: auto;
+  cursor: pointer;
 }
 
-.close {
-  position: absolute;
+.close_login {
+  position: fixed;
   font-weight: bolder;
-  top: 25%;
-  left: 62%;
+  top: -10%;
+  left: 104%;
   color: white;
   font-size: 30px;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+/*----------------------------------------*/
+/*------- REGISTER Modal Overlay ---------*/
+/*----------------------------------------*/
+
+.register_modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  display: none;
+}
+
+.register_box {
+  width: 400px;
+  height: 450px;
+  background-color: white;
+  border: 17px none transparent;
+  border-radius: 11px;
+}
+
+/* HEADER (LOGO AND REGISTER) */
+.third_header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.third_header .logo {
+  width: auto;
+  height: 50px;
+}
+
+.third_header img {
+    margin-right: 0%;
+    margin-top: -18%;
+}
+
+.third_header p {
+  font-size: 40px;
+  margin-left: 5%;
+  color: #304886;
+}
+
+/* INPUTS*/
+.input_box {
+  margin-left: 5%;
+}
+
+#F_name_id, #L_name_id {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #f1f8f;
+  border-style: double;
+  color: #b3b3b3;
+  margin-top: 10px;
+  width: 130px;
+  margin-left: 5%;
+}
+
+#password_id, #conf_password_id, #email_id, #Address_id {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #f1f8f;
+  border-style: double;
+  color: #b3b3b3;
+  margin-top: 10px;
+  margin-left: 20%;
+
+}
+
+.register_button {
+	box-shadow: 0px 5px 15px -7px #000000;
+	background-color: #304886;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Arial', sans-serif;
+	font-size:15px;
+	padding:5px 20px;
+	text-decoration:none;
+  border: none;
+  margin-top: 20px;
+  margin-left: 40%;
+  outline: none;
+}
+
+.register_button:hover {
+	background-color: #293d70;
+  transition: all 0.2s ease 0s;
+}
+.register_button:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.register a:hover {
+   text-decoration: underline;
+}
+
+.close_registration {
+  font-weight: bolder;
+  top: -10%;
+  left: 104%;
+  color: white;
+  font-size: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  position: absolute;
 }

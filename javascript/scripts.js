@@ -17,6 +17,34 @@ function stickyHeader() {
   }
 }
 
+//---------------------------
+//  Login Box / Registration JS
+//---------------------------
+
+//Login Box OPEN
+document.getElementById('signin_button').addEventListener('click',
+function login_box_open(){
+  document.querySelector('.login_modal').style.display = 'flex';
+})
+
+//Login Box CLOSE
+document.getElementById('close_login').addEventListener('click',
+function login_box_close(){
+  document.querySelector('.login_modal').style.display = 'none';
+})
+
+//Registration Box OPEN / Login CLOSE
+document.getElementById('login-register').addEventListener('click',
+function register_box_open(){
+  document.querySelector('.register_modal').style.display = 'flex';
+})
+
+//Registration Box CLOSE
+document.getElementById('close_registration').addEventListener('click',
+function login_box_close(){
+  document.querySelector('.login_modal').style.display = 'flex';
+  document.querySelector('.register_modal').style.display = 'none';
+})
 
 
 //---------------------------
@@ -40,17 +68,3 @@ function initMap() {
     map: map,
   });
 }
-
-
-//---------------------------
-//  Login Box JS
-//---------------------------
-document.getElementById('signin_button').addEventListener('click',
-function login_box_open(){
-  document.querySelector('.modal').style.display = 'flex';
-})
-
-document.getElementById('close').addEventListener('click',
-function login_box_close(){
-  document.querySelector('.modal').style.display = 'none';
-})
