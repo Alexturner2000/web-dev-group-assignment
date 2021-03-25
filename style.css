@@ -88,9 +88,9 @@ li {
   width: auto;
 }
 
-.login_button {
+.signin_button {
 	box-shadow: 0px 5px 15px -7px #000000;
-	background-color:#0049c7;
+	background-color:#304886;
 	border-radius:9px;
 	display:inline-block;
 	cursor:pointer;
@@ -101,11 +101,12 @@ li {
 	text-decoration:none;
   border: none;
 }
-.login_button:hover {
+
+.signin_button:hover {
 	background-color:#0a0cd4;
   transition: all 0.2s ease 0s;
 }
-.login_button:active {
+.signin_button:active {
 	position:relative;
 	top:1px;
 }
@@ -138,4 +139,143 @@ li {
   margin-left: auto;
   margin-right: auto;
 
+}
+
+/*----------------- Modal Overlay --------------*/
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  display: none;
+}
+
+.login_box {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border: 17px none transparent;
+  border-radius: 11px;
+  position:
+}
+
+.second_header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.second_header .logo {
+  width: auto;
+  height: 50px;
+}
+
+.second_header img {
+    margin-right: 0%;
+    margin-top: -18%;
+}
+
+.second_header p {
+  font-size: 40px;
+  margin-left: 5%;
+  color: #4285F4;
+}
+
+/* INPUTS*/
+.input_box {
+  margin-left: 5%;
+}
+
+#email_id {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #f1f8f;
+  border-style: double;
+  color: #b3b3b3;
+}
+
+#password_id {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: #f1f8f;
+  border-style: double;
+  color: #b3b3b3;
+  margin-top: 10px;
+}
+
+.login_button {
+	box-shadow: 0px 5px 15px -7px #000000;
+	background-color:#4285F4;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Arial', sans-serif;
+	font-size:15px;
+	padding:5px 20px;
+	text-decoration:none;
+  border: none;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+.login_button:hover {
+	background-color:#0049c7;
+  transition: all 0.2s ease 0s;
+}
+.login_button:active {
+	position:relative;
+	top:1px;
+}
+
+.register a {
+  color: ##4285F4;
+  margin-left: 5%;
+  text-decoration: none;
+}
+
+.register a:hover {
+   text-decoration: underline;
+}
+
+/* Additional login */
+.split {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.google_login {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+}
+
+.google_login img {
+  height: auto;
+  width: auto;
+}
+
+.close {
+  position: absolute;
+  font-weight: bolder;
+  top: 25%;
+  left: 62%;
+  color: white;
+  font-size: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
 }

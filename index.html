@@ -32,7 +32,7 @@
 					<li><a href="#"> Lessons </a></li>
 				</ul>
 			</nav>
-			<a href="/html/login.html"><button class="login_button"> Login </button></a>
+			<button class="signin_button" id="signin_button"> Login </button>
 		</div>
 	</header>
 
@@ -45,6 +45,35 @@
 		<div id="map"></div>
 	</div>
 
+
+	<!-- Modal For Login Popup -->
+	<div class="modal">
+		<div class="login_box">
+
+			<div class="second_header">
+				<div class="close" id="close">
+					+
+				</div>
+				<p>Login</p>
+				<img src="/images/MtBuggin.png" class="logo">
+			</div>
+
+			<div class="input_box">
+				<input type="email" placeholder="Email..." id="email_id" /><br>
+				<input type="password" placeholder="Password..." id="password_id" /><br>
+			</div>
+
+			<button class="login_button" onclick="login()">Login</button>
+			<div class=register><p><a href="register.html">Not a member?</a></p></div>
+
+			 <div class="split">━━━━━━━ OR ━━━━━━━</div>
+
+			<div class="google_login">
+				<img src="/images/icons/google/1x/btn_google_signin_dark_normal_web.png" class="logo">
+
+			</div>
+		</div>
+	</div>
 
 	<script src="javascript/scripts.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1bR9TBXfURftlBDxlZO8DLx9167qyJck&callback=initMap"type="text/javascript"></script>

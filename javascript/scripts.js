@@ -40,3 +40,17 @@ function initMap() {
     map: map,
   });
 }
+
+
+//---------------------------
+//  Login Box JS
+//---------------------------
+document.getElementById('signin_button').addEventListener('click',
+function login_box_open(){
+  document.querySelector('.modal').style.display = 'flex';
+})
+
+document.getElementById('close').addEventListener('click',
+function login_box_close(){
+  document.querySelector('.modal').style.display = 'none';
+})
