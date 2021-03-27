@@ -197,7 +197,7 @@ li, a, Nav___links{
   margin-left: 22%;
 }
 
-#email_id, #password_id {
+#login_email_id, #login_password_id {
   padding: 8px;
   font-size: 15px;
   border-width: 2px;
@@ -206,6 +206,7 @@ li, a, Nav___links{
   border-style: double;
   color: #b3b3b3;
   margin-top: 10px;
+  margin-left: 19%;
 }
 
 .login_button {
@@ -333,7 +334,7 @@ li, a, Nav___links{
   margin-left: 5%;
 }
 
-#F_name_id, #L_name_id {
+#reg_Fname_id, #reg_Lname_id {
   padding: 8px;
   font-size: 15px;
   border-width: 2px;
@@ -346,7 +347,7 @@ li, a, Nav___links{
   margin-left: 5%;
 }
 
-#password_id, #conf_password_id, #email_id, #Address_id {
+#reg_password_id, #reg_Cpassword_id, #reg_email_id, #reg_address_id {
   padding: 8px;
   font-size: 15px;
   border-width: 2px;
@@ -385,8 +386,6 @@ li, a, Nav___links{
 	top:1px;
 }
 
-
-
 .register a:hover {
    text-decoration: underline;
 }
@@ -400,4 +399,27 @@ li, a, Nav___links{
   transform: rotate(45deg);
   cursor: pointer;
   position: absolute;
+}
+
+
+/*----------------------------------------*/
+/*-------------- FOOTER ------------------*/
+/*----------------------------------------*/
+
+#footer{
+  background-color: #304886;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  font-weight: normal;
+}
+
+.footer a {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 10px;
 }
