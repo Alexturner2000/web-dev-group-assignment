@@ -1,0 +1,20 @@
+/*----------------------------------------*/
+/*----------------- MAIN BODY-------------*/
+/*----------------------------------------*/
+
+.main___pic img {
+  margin-top: auto;
+  display: block;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+#map {
+  height: 400px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+
+}

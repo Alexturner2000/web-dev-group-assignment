@@ -99,6 +99,18 @@ li, a, Nav___links{
   width: auto;
 }
 
+/*FIX*/
+.header-right {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.user-icon {
+  height: 50px;
+  width: auto;
+}
+
 .signin_button { /* Sign in button style */
 	box-shadow: 0px 5px 15px -7px #000000;
 	background-color:#304886;
@@ -124,27 +136,32 @@ li, a, Nav___links{
 	top:1px;
 }
 
-
-/*----------------------------------------*/
-/*----------------- MAIN BODY-------------*/
-/*----------------------------------------*/
-
-.main___pic img {
-  margin-top: auto;
-  display: block;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
+.signout_button { /* Sign in button style */
+	box-shadow: 0px 5px 15px -7px #000000;
+	background-color:#304886;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Arial', sans-serif;
+	font-size:15px;
+	padding:12px 35px;
+	text-decoration:none;
+  border: none;
+  outline: none;
+  display: none;
 }
 
-#map {
-  height: 400px;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-
+.signout_button:hover {
+	background-color: #293d70;
+  transition: all 0.2s ease 0s;
 }
+
+.signout_button:active {
+	position:relative;
+	top:1px;
+}
+
 
 /*----------------------------------------*/
 /*------- LOGIN Modal Overlay ------------*/

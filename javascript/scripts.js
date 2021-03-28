@@ -69,7 +69,6 @@ function initMap() {
 }
 
 
-
 //----------------------------------------------------------------
 //  Firebase Login JS
 //----------------------------------------------------------------
@@ -79,7 +78,11 @@ function initMap() {
     if (user) {// User is signed in.
       document.querySelector('.login_modal').style.display = 'none';
       document.querySelector('.register_modal').style.display = 'none';
+      document.querySelector('.signin_button').style.display = 'none';
+      document.querySelector('.signout_button').style.display = 'inline-block';
     } else {// No user is signed in.
+      document.querySelector('.signin_button').style.display = 'inline-block';
+      document.querySelector('.signout_button').style.display = 'none';
     }
 });
 
@@ -121,7 +124,7 @@ function register() {
 
 //SIGNOUT
 function signout() {
-    firebase.auth().signOut().then(() => {
+  firebase.auth().signOut().then(() => {
     // Sign-out successful.
   }).catch((error) => {
     // An error happened.
