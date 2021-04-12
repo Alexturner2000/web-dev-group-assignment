@@ -49,7 +49,7 @@ body {
 }
 
 .sticky + .content {
-  margin-top: 101px;
+  down: 500px;
 }
 
  /*wraps logo and NAV*/
@@ -109,6 +109,31 @@ li, a, Nav___links{
 .user-icon {
   height: 50px;
   width: auto;
+}
+
+.profile_button { /* Sign in button style */
+	box-shadow: 0px 5px 15px -7px #000000;
+	background-color:#ffffff;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#304886;
+	font-family: 'Arial', sans-serif;
+	font-size:15px;
+	padding:12px 35px;
+	text-decoration:none;
+  border: none;
+  outline: none;
+}
+
+.profile_button:hover {
+	background-color: #F5F5F5;
+  transition: all 0.2s ease 0s;
+}
+
+.profile_button:active {
+	position:relative;
+	top:1px;
 }
 
 .signin_button { /* Sign in button style */
@@ -417,6 +442,62 @@ li, a, Nav___links{
   cursor: pointer;
   position: absolute;
 }
+/*----------------------------------------*/
+/*-------  Profile Modal Overlay ---------*/
+/*----------------------------------------*/
+
+.profile_modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top:0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  display: none;
+}
+
+.profile_box {
+  width: 700px;
+  height: 450px;
+  background-color: white;
+  border: 17px none transparent;
+  border-radius: 11px;
+}
+
+.close_profile {
+  font-weight: bolder;
+  top: -10%;
+  left: 104%;
+  color: white;
+  font-size: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  position: absolute;
+}
+
+.profile_pic {
+  height: 40%;
+  width: auto;
+  margin-left: 35%;
+  align-items: center;
+  left: auto;
+  right: auto;
+  padding: 20px;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 /*----------------------------------------*/

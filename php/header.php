@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <HTML lang="en">
 
@@ -6,8 +7,10 @@
 	<META name="author" content="Alex Turner & Keiran Conway">
 	<META name="Description" content="Index page for 'Mt.Buggin' website">
 	<!-- Font Stylesheets -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 	<!-- Animation Stylesheets -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 	<!-- style.css Stylesheets -->
@@ -17,6 +20,7 @@
 	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
 </HEAD>
 
 <BODY>
@@ -30,17 +34,18 @@
 	<!-- Dynamic Fixed Nav Bar -->
 	<header id="myHeader">
 		<div class="header_wrapper">
-			<a href="#"><img src="../images/MtBuggin.png" alt="logo" class="logo"></a>
+			<a href="homepage.php"><img src="../images/MtBuggin.png" alt="logo" class="logo"></a>
 			<nav>
 				<ul class="Nav_UI">
-					<li><a href="#"> Home </a></li>
-					<li><a href="#"> The Resort </a></li>
-					<li><a href="#"> Tickets </a></li>
-					<li><a href="#"> Lessons </a></li>
+					<li><a href="homepage.php"> Home </a></li>
+					<li><a href="resort.php"> The Resort </a></li>
+					<li><a href="tickets.php"> Ticket </a></li>
+					<li><a href="lessons.php"> Lessons </a></li>
+					<li><a href="shop.php"> Shop </a></li>
 				</ul>
 			</nav>
 			<div class="header-right">
-				<img src="../images/icons/user-icon.png" alt="user-icon" class="user-icon"></a>
+				<button class="profile_button" id="profile_button"> Profile </button>
 				<button class="signin_button" id="signin_button"> Sign in </button>
 				<button class="signout_button" id="signout_button" onclick="signout()"> Sign out </button>
 			</div>
@@ -106,5 +111,20 @@
         <button class="register_button" onclick="register()">Register</button>
 
       </div>
+    </div>
+  </div>
+
+	<div class="profile_modal">
+    <!-- Modal For Register box -->
+    <div class="animate__animated animate__fadeInLeft">
+      <!-- Animation Stylesheet provided by https://animate.style/ -->
+      <div class="profile_box">
+				<div class="close_profile" id="close_profile"> + </div>
+				<img src="../images/icons/user-icon.png" class="profile_pic">
+				<div class="user-info">
+					<h1 class="username">Logged in as :</h>
+					<h1 id="email">&nbsp </h>
+				</div>
+			</div>
     </div>
   </div>

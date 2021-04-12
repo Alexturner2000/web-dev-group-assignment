@@ -8,10 +8,12 @@
 
 <!-- Firebase Initialization Script -->
 <script src="../javascript/firebase-initialization.js"></script>
-<!-- Page Script -->
-<script src="../javascript/scripts.js"></script>
+
 <!-- Google Maps API Script -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1bR9TBXfURftlBDxlZO8DLx9167qyJck&callback=initMap" type="text/javascript"></script>
+
+<!-- Page Script -->
+<script src="../javascript/scripts.js"></script>
 
 </BODY>
 

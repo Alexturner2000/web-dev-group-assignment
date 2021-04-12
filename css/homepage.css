@@ -1,20 +1,59 @@
 /*----------------------------------------*/
 /*----------------- MAIN BODY-------------*/
 /*----------------------------------------*/
+.content {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
 
 .main___pic img {
   margin-top: auto;
   display: block;
-  width: 95%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: auto;
 }
 
 #map {
-  height: 400px;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 700px;
+  width: 100%;
+}
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "gmap mainbody";
+}
+
+.gmap {
+  grid-area: gmap;
+}
+
+.mainbody {
+  grid-area: mainbody;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mainbody img {
+  width: 90%;
+  height: auto;  
+}
+
+.mainbody h{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.warning {
+  font-size: 24px;  
+}
+  
+.sticky + .content {
+  down: 500px;
 }

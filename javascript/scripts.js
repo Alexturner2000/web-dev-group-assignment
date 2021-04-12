@@ -1,7 +1,6 @@
-
-//----------------------------------
+//----------------------------------------------------------------
 // Fixed NAV on scroll JS
-//----------------------------------
+//----------------------------------------------------------------
 window.onscroll = function() {
   stickyHeader()
 };
@@ -17,56 +16,49 @@ function stickyHeader() {
   }
 }
 
-//------------------------------------
+
+//----------------------------------------------------------------
 //  Login & Registration Modal Box JS
-//------------------------------------
+//----------------------------------------------------------------
 
-//Login Box OPEN
-document.getElementById('signin_button').addEventListener('click',
-function login_box_open(){
-  document.querySelector('.login_modal').style.display = 'flex';
-})
+  //Login Box [OPEN]
+  document.getElementById('signin_button').addEventListener('click',
+  function login_box_open(){
+    document.querySelector('.login_modal').style.display = 'flex';
+  })
 
-//Login Box CLOSE
-document.getElementById('close_login').addEventListener('click',
-function login_box_close(){
-  document.querySelector('.login_modal').style.display = 'none';
-})
+  //Login Box [CLOSE]
+  document.getElementById('close_login').addEventListener('click',
+  function login_box_close(){
+    document.querySelector('.login_modal').style.display = 'none';
+  })
 
-//Registration Box OPEN / Login CLOSE
-document.getElementById('login-register').addEventListener('click',
-function register_box_open(){
-  document.querySelector('.register_modal').style.display = 'flex';
-})
+  //Registration Box [OPEN]
+  document.getElementById('login-register').addEventListener('click',
+  function register_box_open(){
+    document.querySelector('.register_modal').style.display = 'flex';
+  })
 
-//Registration Box CLOSE
-document.getElementById('close_registration').addEventListener('click',
-function login_box_close(){
-  document.querySelector('.login_modal').style.display = 'flex';
-  document.querySelector('.register_modal').style.display = 'none';
-})
+  //Registration Box [CLOSE]
+  document.getElementById('close_registration').addEventListener('click',
+  function login_box_close(){
+    document.querySelector('.login_modal').style.display = 'flex';
+    document.querySelector('.register_modal').style.display = 'none';
+  })
 
-//---------------------------
-//  GOOGLE MAPS JS
-//---------------------------
-function initMap() {
-  // The location of whistler
-  const whistler= {
-    lat: 50.059430,
-    lng: -122.957110
-  };
-  // The map, centered at whistler
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: whistler,
-    mapTypeId: 'satellite'
-  });
-  // The marker, positioned at whistler
-  const marker = new google.maps.Marker({
-    position: whistler,
-    map: map,
-  });
-}
+  //Profile Box [OPEN]
+  document.getElementById('profile_button').addEventListener('click',
+  function profile_box_open(){
+    document.querySelector('.profile_modal').style.display = 'flex';
+  })
+
+  //Profile Box [CLOSE]
+  document.getElementById('close_profile').addEventListener('click',
+  function profile_box_open(){
+    document.querySelector('.profile_modal').style.display = 'none';
+  })
+
+
 
 
 //----------------------------------------------------------------
@@ -76,13 +68,22 @@ function initMap() {
 //IF USER IS LOGGED IN
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {// User is signed in.
+      var user = firebase.auth().currentUser;
+      var email = user.email;
+
+
+      document.getElementById("email").innerHTML=email;
+
+
       document.querySelector('.login_modal').style.display = 'none';
       document.querySelector('.register_modal').style.display = 'none';
       document.querySelector('.signin_button').style.display = 'none';
       document.querySelector('.signout_button').style.display = 'inline-block';
+      document.querySelector('.profile_button').style.display = 'inline-block';
     } else {// No user is signed in.
       document.querySelector('.signin_button').style.display = 'inline-block';
       document.querySelector('.signout_button').style.display = 'none';
+      document.querySelector('.profile_button').style.display = 'none';
     }
 });
 
@@ -130,3 +131,7 @@ function signout() {
     // An error happened.
   });
 }
+
+//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------------

@@ -1,0 +1,133 @@
+
+.content{
+margin-left: 2%;
+margin-right: 2%;
+font-family: 'Raleway', sans-serif;
+font-weight: none;
+}
+
+#Trail{
+  padding-left: 10px;
+  width:95%;
+  height:auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr 250px;
+  gap: 0px 0px;
+  grid-template-areas:
+  "Welcome Welcome Welcome Welcome"
+  "Map Map Village Village"
+  "Map Map Village Village"
+  "Activities Activities Activities Activities"
+  "Activities Activities Activities Activities";
+}
+
+.Welcome {
+  color: #0049c7;
+  font-size: auto;
+  text-align: center;
+  font-weight: bolder;
+   grid-area: Welcome; }
+
+.Activities {
+  color: #0049c7;
+  text-align: center;
+   grid-area: Activities; }
+
+.Map {
+  background-color: #002366;
+  border-top: 5px solid;
+  border-radius: 20px;
+  color: white;
+  grid-area: Map; }
+
+.Map h1
+ {
+  margin-left:10px;
+}
+
+.Village {
+  padding: 10px;
+  background-color: #002366;
+  border-top: 5px solid;
+  border-radius: 20px;
+  color: white;
+  grid-area: Village; }
+
+.village h1{
+  text-align: center;
+}
+
+  * {box-sizing: border-box;}
+  body {font-family: Verdana, sans-serif;}
+  .mySlides {display: none;}
+  img {vertical-align: middle;}
+
+  .slideshow-container {
+    max height: 609px;
+    max-width: 85%;
+    position: relative;
+    margin: auto;
+  }
+
+  .text {
+    font-weight: bolder;
+    color: #0049c7;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color:#0049c7;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+
+#Show{
+  max-height: 609px;
+}
